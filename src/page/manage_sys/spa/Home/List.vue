@@ -2,7 +2,7 @@
     <div class="hello pulic-page-class">
         <div class="y-body-title">
             <el-breadcrumb separator-class="el-icon-arrow-right">
-                <img class="breadcrumb-left-verticalPole" src="../../../assets/img/indexIcon.png" alt="">
+                <img class="breadcrumb-left-verticalPole" src="../../../../assets/img/indexIcon.png" alt="">
                 <el-breadcrumb-item :to="{ path: '/list' }">表格</el-breadcrumb-item>
             </el-breadcrumb>
         </div>

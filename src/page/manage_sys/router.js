@@ -16,40 +16,68 @@ Vue.use(Router)
 
 // 使用路由懒加载
 function loadView(view) {
-    return () => import(/* webpackChunkName: "view-[request]" */ `./spa/${view}.vue`)
+  return () => import( /* webpackChunkName: "view-[request]" */ `./spa/${view}.vue`)
 }
 
 export default new Router({
-  routes: [
+  routes: [{
+      path: "/",
+      redirect: "/home"
+    }, //重定向,指向了home组件  
     {
-      path: '/',
+      path: '/home',
       name: 'Home',
-      component: loadView("Home")
+      component: loadView("Home"),
       // component: Home
+      children: [{
+          path: '/home/list',
+          name: 'List',
+          component: loadView("Home/List")
+          // component: List
+        },
+        {
+          path: '/home/upload',
+          name: 'Upload',
+          component: loadView("Home/Upload")
+          // component: Upload
+        },
+        {
+          path: '/home/rich_text',
+          name: 'RichText',
+          component: loadView("Home/RichText")
+          // component: RichText
+        },
+        {
+          path: '/home/vuex',
+          name: 'Vuex',
+          component: loadView("Home/Vuex")
+          // component: Vuex
+        }
+      ]
     },
-    {
-      path: '/list',
-      name: 'List',
-      component: loadView("List")
-      // component: List
-    },
-    {
-      path: '/upload',
-      name: 'Upload',
-      component: loadView("Upload")
-      // component: Upload
-    },
-    {
-      path: '/rich_text',
-      name: 'RichText',
-      component: loadView("RichText")
-      // component: RichText
-    },
-    {
-      path: '/vuex',
-      name: 'Vuex',
-      component: loadView("Vuex")
-      // component: Vuex
-    }
+    // {
+    //   path: '/list',
+    //   name: 'List',
+    //   component: loadView("List")
+    //   // component: List
+    // },
+    // {
+    //   path: '/upload',
+    //   name: 'Upload',
+    //   component: loadView("Upload")
+    //   // component: Upload
+    // },
+    // {
+    //   path: '/rich_text',
+    //   name: 'RichText',
+    //   component: loadView("RichText")
+    //   // component: RichText
+    // },
+    // {
+    //   path: '/vuex',
+    //   name: 'Vuex',
+    //   component: loadView("Vuex")
+    //   // component: Vuex
+    // }
   ]
 })

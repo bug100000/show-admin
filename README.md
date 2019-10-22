@@ -1,6 +1,6 @@
-# gas-station
+# j-apple
 
-> 加油站后台管理项目
+> 京苹果后台管理项目
 
 ## Build Setup
 

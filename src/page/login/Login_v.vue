@@ -58,6 +58,11 @@ export default {
             this.$refs[formName].validate(valid => {
                 if (valid) {
                     alert("submit!");
+                    this.$Axios
+                    .get("https://www.jianshu.com/p/df464b26ae58/")
+                    .then(function(result){
+                        console.log(result)
+                    })
                 } else {
                     console.log("error submit!!");
                     return false;
@@ -71,7 +76,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
 #login {
     font-family: "Avenir", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

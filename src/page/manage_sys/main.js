@@ -1,6 +1,5 @@
 // 引入库
 import Vue from 'vue'
-import Axios from 'axios'
 import  VueQuillEditor from 'vue-quill-editor'
 import ElementUI from 'element-ui'
 
@@ -23,6 +22,7 @@ import store from "./store.js"
 // 引入公用变量
 import commonFun from '../../assets/js/commonFun.js'
 import commonVar from '../../assets/js/commonVar.js'
+import axios from '../../assets/js/axios.js'
 
 // 使用UI与插件
 Vue.use(ElementUI)
@@ -32,9 +32,10 @@ Vue.use(VueQuillEditor)
 Vue.component('Message', Message)
 Vue.component('LeftNav', LeftNav)
 
-// Vue.prototype.$commonFun = commonFun;
-// Vue.prototype.$commonVar = commonVar;
-// Vue.prototype.$axios = Axios;
+Vue.prototype.$commonFun = commonFun;
+Vue.prototype.$commonVar = commonVar;
+Vue.prototype.$axios = axios;
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -43,8 +44,5 @@ new Vue({
   el: '#app',
   router,
   store,
-  commonFun,
-  commonVar,
-  Axios,
   render: h => h(App)
 })

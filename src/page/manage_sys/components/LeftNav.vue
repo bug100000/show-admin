@@ -2,11 +2,11 @@
     <el-row class="tac" id="yLeftNav">
         <el-col style="width: 201px;">
             <el-menu :router="true" default-active="/" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#32323a" text-color="#9aa1a9" active-text-color="#fff">
-                <el-menu-item index="1">
+                <el-menu-item index="/home/1">
                     <i class="el-icon-menu"></i>
                     <span slot="title">导航一</span>
                 </el-menu-item>
-                <el-submenu index="2">
+                <el-submenu index="/home/2">
                     <template slot="title">
                         <i class="el-icon-location"></i>
                         <span>导航二</span>
@@ -19,27 +19,27 @@
                         <el-menu-item index="1-4-1">选项4-1</el-menu-item>
                     </el-submenu>
                 </el-submenu>
-                <el-menu-item index="3">
+                <el-menu-item index="/home/3">
                     <i class="el-icon-setting"></i>
                     <span slot="title">导航三</span>
                 </el-menu-item>
-                <el-menu-item index="4">
+                <el-menu-item index="/home/4">
                     <i class="el-icon-star-on"></i>
                     <span slot="title">导航四</span>
                 </el-menu-item>
-                <el-menu-item index="/vuex">
+                <el-menu-item index="/home/vuex">
                     <i class="el-icon-location"></i>
                     <span slot="title">vuex</span>
                 </el-menu-item>
-                <el-menu-item index="/rich_text">
+                <el-menu-item index="/home/rich_text">
                     <i class="el-icon-picture"></i>
                     <span slot="title">富文本编辑器</span>
                 </el-menu-item>
-                <el-menu-item index="/upload">
+                <el-menu-item index="/home/upload">
                     <i class="el-icon-upload"></i>
                     <span slot="title">文件上传</span>
                 </el-menu-item>
-                <el-menu-item index="/list">
+                <el-menu-item index="/home/list">
                     <i class="el-icon-phone"></i>
                     <span slot="title">列表</span>
                 </el-menu-item>

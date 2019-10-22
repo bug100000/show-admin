@@ -1,7 +1,7 @@
 <template>
     <div class="hello pulic-page-class">
         <div class="y-body-title">
-            <img class="breadcrumb-left-verticalPole" src="../../../assets/img/indexIcon.png" alt="">
+            <img class="breadcrumb-left-verticalPole" src="../../../../assets/img/indexIcon.png" alt="">
             <el-breadcrumb separator-class="el-icon-arrow-right">
                 <el-breadcrumb-item :to="{ path: '/rich_text' }">富文本编辑器</el-breadcrumb-item>
             </el-breadcrumb>
