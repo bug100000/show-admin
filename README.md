@@ -1,6 +1,6 @@
-# j-apple
+# show-admin
 
-> 京苹果后台管理项目
+> show后台管理项目
 
 ## Build Setup
 
